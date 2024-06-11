@@ -80,7 +80,7 @@ void loop()
   Serial.setTimeout(20000L);
   //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   Serial.println(F("---------------------------------------"));
-  Serial.println(F("Enter Wroker number No, ending with #"));
+  Serial.println(F("Enter Worker ID No, ending with #"));
   len = Serial.readBytesUntil('#', (char *) buffer, 16);
   //add empty spaces to the remaining bytes of buffer
   for (byte i = len; i < 16; i++) buffer[i] = ' ';
@@ -108,7 +108,7 @@ void loop()
   dumpSerial(blockNum, readBlockData);
   //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   Serial.println(F("---------------------------------------"));
-  Serial.println(F("Enter ID number, ending with #"));
+  Serial.println(F("Enter Phone number, ending with #"));
   len = Serial.readBytesUntil('#', (char *) buffer, 16);
   for (byte i = len; i < 16; i++) buffer[i] = ' ';
   blockNum = 8;
