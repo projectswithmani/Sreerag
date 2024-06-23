@@ -12,7 +12,7 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 const char *GScriptId = "AKfycbxq4TAN4_b2IgwA0iWrv_tis2LYWtJMoV2qLgvKyo108w4DRSPEIvW-ITutkm1N4pzN";
 //---------------------------------------------------------------------------------------------------------
 // Enter network credentials:
-const char* ssid     = "k.mani";
+const char* ssid     = "project";
 const char* password = "12345678";
 //---------------------------------------------------------------------------------------------------------
 // Enter command (insert_row or append_row) and your Google Sheets sheet name (default is Sheet1):
@@ -244,7 +244,7 @@ void loop() {
     // do stuff here if publish was successful
     lcd.clear();
     lcd.setCursor(0,0); //col=0 row=0
-    lcd.print("Name : "+student_Rollno);
+    lcd.print("Id No : "+student_Rollno);
     lcd.setCursor(0,1); //col=0 row=0
     lcd.print("Present");
     digitalWrite(D8, HIGH);
